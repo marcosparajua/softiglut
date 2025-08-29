@@ -3,6 +3,7 @@ import { Game } from './game';
 import { FaceFilterOverlay } from './faceFilterOverlay';
 import { loadWorldMap } from './worldMap';
 import { loadRandomImages } from './collage';
+import './style.css';
 
 const loadCollageImages = async (): Promise<void> => {
   const response = await fetch('assets/collage.json');
