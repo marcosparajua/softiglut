@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: './',
-  base: '/softiglut/',
+  base: './',
   build: {
     outDir: 'dist',
     target: 'es2020',
