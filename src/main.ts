@@ -5,7 +5,7 @@ import { loadWorldMap } from './worldMap';
 import { loadRandomImages } from './collage';
 
 const loadCollageImages = async (): Promise<void> => {
-  const response = await fetch('/assets/collage.json');
+  const response = await fetch('assets/collage.json');
   if (!response.ok) {
     throw new Error(`Failed to load collage.json: ${response.statusText}`);
   }
@@ -14,10 +14,10 @@ const loadCollageImages = async (): Promise<void> => {
 };
 const face = new FaceFilterOverlay();
 
-const horseSound = new Audio('/assets/horsEren.mp3');
+const horseSound = new Audio('assets/horsEren.mp3');
 horseSound.loop = true;
 
-const soundtrack = new Audio('/assets/Sima.mp3');
+const soundtrack = new Audio('assets/Sima.mp3');
 soundtrack.loop = true;
 
 const ASSET_LIST = [
@@ -41,7 +41,7 @@ const ASSET_LIST = [
 window.addEventListener('load', async () => {
   await loadAssets(ASSET_LIST);
   await loadCollageImages();
-  const world = await loadWorldMap('/assets/world.json');
+  const world = await loadWorldMap('assets/world.json');
   const canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
   const game = new Game(canvas, horseSound, soundtrack, world);
   game.setFaceOverlay(face);

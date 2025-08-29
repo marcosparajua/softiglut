@@ -57,7 +57,7 @@ export class FaceFilterOverlay {
     this.video.autoplay = true;
 
     const maskSheet = new Image();
-    maskSheet.src = '/assets/clown.png';
+    maskSheet.src = 'assets/clown.png';
     maskSheet.onload = (): void => {
       this.maskAnimator = new SpriteAnimator(maskSheet, 128, 128, 6, 0.3);
     };

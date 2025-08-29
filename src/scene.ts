@@ -67,7 +67,7 @@ export class Scene {
         4,
         0.25,
         'animal',
-        '/assets/duck.mp3'
+        'assets/duck.mp3'
       )
     );
 
@@ -85,12 +85,12 @@ export class Scene {
         14,
         0.25,
         'dancer',
-        '/assets/dancer.mp3'
+        'assets/dancer.mp3'
       )
     );
 
     this.dialogueUI = new DialogueUI(this.input);
-    this.dialogueManager = new NPCDialogueManager('/assets/npcQuotes.json');
+    this.dialogueManager = new NPCDialogueManager('assets/npcQuotes.json');
     this.dialogueManager.load().catch(err => {
       throw new Error(`Failed to load NPC dialogues: ${err}`);
     });
